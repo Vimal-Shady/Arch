@@ -1,0 +1,157 @@
+// -*- mode: jsonc -*-
+{
+    //https://github.com/Alexays/ last time I used this!
+    // "layer": "top",
+    // "position": "bottom",
+    "height": 35,
+    // "width": 380, // Waybar width
+    "spacing": 4,
+    "margin-bottom":-5,
+    // Choose the order of the modules
+    // modules commented: (avoid sway cause it is not installed)
+    //     "network",
+    //     "cpu",
+    //     "memory",
+    //     "backlight",
+    //     "custom/media",
+    //     "pulseaudio/slider"
+
+
+    //modules placing
+    "modules-center": [
+        "hyprland/workspaces"
+    ],
+    "modules-left": [
+        "power-profiles-daemon",
+        "clock",
+        "network#eth",
+        "bluetooth"
+        
+    ],
+    "modules-right": [
+        "pulseaudio",
+        "network#wifi",
+        "battery", 
+        "temperature"
+    ],
+
+    //Workspace
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "on-click": "activate",
+        "persistent-workspaces":{
+            "1": [],
+            "2": [],
+            "3": [],
+            "4": [],
+            "5": []
+        },
+        "format-icons": {
+            "1": "\uf120",
+            //echo -e "\uf120 \uf268  \uf1bc \uf075 \uf06a \uf192 \uf111"
+            "2": "\uf121",
+            "3": "\uf268",
+            "4": "\ue32e",
+            "5": "\uf0f4",
+            "urgent": "\uf111",
+            "active": "\uf192",
+            "default": ""
+        },
+        "sort-by-number": true
+    },
+
+    //module utils
+    "clock": {
+        "timezone": "Asia/Kolkata",
+        "tooltip-format": "<big>{:%Y %m %d}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%Y-%m-%d}"
+    },
+    "temperature": {
+        "critical-threshold": 40,
+        // "format-critical": "{temperatureC}°C {icon}",
+        "format": "{temperatureC}°C"
+    },
+    // "backlight": {
+    //     // "device": "acpi_video1",
+    //     "format": "{percent}% {icon}",
+    //     "format-icons": ["", "", "", "", "", "", "", "", ""]
+    // },
+    "battery": {
+        "states": {
+            "good": 95,
+            "warning": 50,
+            "critical": 20
+        },
+        "format": "{capacity}% {icon}",
+        "format-full": "{capacity}% {icon}",
+        "format-charging": "{capacity}% ⚡︎",
+        "format-plugged": "{capacity}% ",
+        "format-alt": "{time} {icon}",
+        "format-icons": ["\uf244", "\uf243","\uf242","\uf241","\uf240"]
+    },
+    "power-profiles-daemon": {
+      "format": "{icon}",
+      "tooltip-format": "{profile}",
+      "tooltip": true,
+      "format-icons": {
+        //♨️ use
+        "default": "",
+        "performance": "<i>&#128293;</i>",
+        "balanced": "<i>&#xf013;</i>",
+        "power-saver": "<i>&#xf06c;</i>"
+      }
+    },
+
+    "pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
+        "format": "{volume}% {icon} {format_source}",
+        "format-muted": "",
+        "format-source": "",
+        "format-source-muted": "",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": "{icon} {format_source}",
+        "format-icons": {
+            "headphone": " \uf025",
+            "hands-free": "",
+            "headset": "ᖳᖰ",
+            "phone": "",
+            "portable": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+    "bluetooth": {
+        "min-length":6,
+        "format": "Bluetooth",
+        "format-on":"",
+        "format-off":"X",
+        "format-connected": "\uf0c1   {num_connections}",
+        "tooltip-format-on":"No Device connected",
+        "tooltip-format-connected": "{device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias}",
+        "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_battery_percentage}%",
+        "on-click": "blueberry"  
+},
+
+    // Network
+    "network#eth": {
+        "interface": "enp8s0",
+        "format":"",
+        "format-ethernet": "&#x1F310;",
+        "format-disconnected": "",
+        "tooltip-format": "{ifname} via {gwaddr} 󰊗",
+        "tooltip-format-disconnected": "",
+        "max-length": 10
+    },
+
+    "network#wifi": {
+        "interface": "wlan0",
+        "format":"",
+        "format-wifi": "",
+        "format-disconnected": "",
+        "tooltip-format-wifi": "   {essid} ({signalStrength}%)",
+        "tooltip-format-disconnected": "",
+        "max-length": 10,
+        "on-click": "nm-connection-editor"
+    }
+}

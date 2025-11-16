@@ -1,0 +1,121 @@
+@theme "/dev/null"
+@import "colors.rasi"
+
+configuration {
+	modi: "window,drun";
+	display-drun: "Applications";
+	display-window: "Windows";
+	drun-display-format: "{icon} {name}";
+	drun-sort: "alphabetical";
+	font: "JetBrainsMono Nerd Font 10";
+	show-icons: true;
+	icon-theme: "Colloid";
+}
+
+window {
+	transparency: "real";
+	location: center;
+	anchor: center;
+	fullscreen: false;
+	width: 520px;
+	height: 520px;
+	border: 2px solid;
+	border-color: @secondary-container;
+	border-radius: 14px;
+	background-color: @on-primary-fixed;
+}
+
+mainbox {
+	spacing: 0px;
+	orientation: vertical;
+	background-color: transparent;
+	children: [ "inputbar", "listview", "mode-switcher" ];
+}
+
+inputbar {
+	spacing: 8px;
+	padding: 10px;
+	border-radius: 8px;
+	background-color: @on-primary;
+	text-color: @on-surface;
+	children: [ "textbox-prompt-colon", "entry" ];
+}
+
+textbox-prompt-colon {
+	expand: false;
+	str: "  ";
+	background-color: inherit;
+	text-color: inherit;
+}
+
+entry {
+	background-color: inherit;
+	text-color: inherit;
+	cursor: text;
+	placeholder: "Search";
+	placeholder-color: inherit;
+}
+
+listview {
+	columns: 1;
+	lines: 8;
+	cycle: true;
+	dynamic: true;
+	scrollbar: false;
+	layout: vertical;
+	fixed-height: true;
+	spacing: 4px;
+	background-color: transparent;
+	text-color: @on-surface;
+	cursor: "default";
+}
+
+element {
+	spacing: 8px;
+	padding: 8px 10px;
+	border-radius: 8px;
+	background-color: transparent;
+	text-color: @on-surface;
+	cursor: pointer;
+}
+element selected.normal {
+	background-color: @primary;
+	text-color: @on-secondary;
+}
+
+element-icon {
+	size: 26px;
+	background-color: transparent;
+	text-color: inherit;
+}
+
+element-text {
+	background-color: transparent;
+	text-color: inherit;
+	vertical-align: 0.5;
+	horizontal-align: 0.0;
+}
+
+mode-switcher {
+	spacing: 0px;
+	background-color: transparent;
+	text-color: @primary-fixed;
+	horizontal-align: 0.5;
+}
+
+button {
+	padding: 6px 10px;
+	border-radius: 6px;
+	background-color: @on-primary;
+	text-color: inherit;
+	cursor: pointer;
+}
+button selected {
+	background-color: @primary;
+	text-color: @on-secondary;
+}
+
+message, textbox, error-message {
+	background-color: transparent;
+	text-color: @on-surface;
+}

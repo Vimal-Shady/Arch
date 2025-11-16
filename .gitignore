@@ -1,0 +1,17 @@
+# Ignore EVERYTHING
+*
+
+!.gitignore
+!hypr/
+!hyprlock/
+!rofi
+!walker
+!waybar
+
+!hypr/*
+!hyprlock/*
+!rofi/*
+!walker/*
+!waybar/*
+
+*.save
