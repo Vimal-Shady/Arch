@@ -3,10 +3,12 @@
     //https://github.com/Alexays/ last time I used this!
     // "layer": "top",
     // "position": "bottom",
-    "height": 35,
-    // "width": 380, // Waybar width
-    "spacing": 4,
-    "margin-bottom":-5,
+    "layer": "top",
+    "margin-top": 8,
+    "margin-bottom": 0,
+    "margin-left": 8,
+    "margin-right": 8,
+    "spacing": 0,
     // Choose the order of the modules
     // modules commented: (avoid sway cause it is not installed)
     //     "network",

@@ -1,5 +1,4 @@
 * {
-    /* `otf-font-awesome` is required to be installed for icons */
     font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
     font-size: 15px;
     font-weight: bold;
@@ -39,11 +38,12 @@ button:hover {
 }
 
 #workspaces button {
-    padding: 0 4px;
     background-color: transparent;
     transition: 0.2s ease-in-out;
-    border-radius: 3px;
     color: #ffffff;
+    border-radius: 6px;
+    padding:0px 5px 0px 5px;
+    margin:0px 2px 0px 2px;
 }
 
 #workspaces button:hover {
@@ -91,10 +91,6 @@ button:hover {
     margin: 4px;
 }
 
-#window,
-#workspaces {
-    margin: 0 4px;
-}
 
 If workspaces is the leftmost module, omit left margin
 .modules-left > widget:first-child > #workspaces {
