@@ -1,33 +1,58 @@
 /* ---- Configuration ---- */
 configuration {
-    modi:                       "drun,filebrowser,window,run";
-    font:                       "JetBrainsMono Nerd Font 10";
-    show-icons:                 true;
-    display-drun:               " ";
-    display-run:               " ";
-    display-filebrowser:        "";
-    display-window:             "";
-    drun-display-format:        "{name}";
-    hover-select:               false;
-    scroll-method:              1;
-    me-select-entry:            "";
-    me-accept-entry:            "MousePrimary";
-    window-format:              "{w} · {c} · {t}";
-    icon-theme:                 "Colloid";
+    modi:                        "drun,filebrowser,window,run";
+    font:                        "JetBrainsMono Nerd Font 10";
+    show-icons:                  true;
+    display-drun:                " ";
+    display-run:                 " ";
+    display-filebrowser:         "";
+    display-window:              "";
+    drun-display-format:         "{name}";
+    hover-select:                false;
+    scroll-method:               1;
+    me-select-entry:             "";
+    me-accept-entry:             "MousePrimary";
+    window-format:               "{w} · {c} · {t}";
+    icon-theme:                  "Colloid";
 }
 
-/* ---- Window ---- */
+/* ---- Global Colors/Styles (Internal) ---- */
+/* Define colors using ARGB format (AA RR GG BB) for transparency */
+* {
+    /* Base Colors - Adjust for the hue you want */
+    fg:                          #FFFFFF; /* White Text */
+    bg:                          #000000; /* Black */
+    primary:                     #719DE3; /* Bright Cool Blue for accents/selection */
+    
+    /* Transparent Backgrounds */
+    /* AA (Alpha channel) - FF is opaque, 00 is transparent */
+    window-bg:                   #AA1F1F1F; /* 66% Opacity Dark Gray (The 'glass' base) */
+    input-bg:                    #CC2F2F2F; /* 80% Opacity Dark Gray (Slightly more solid input) */
+    list-bg:                     #00000000; /* Fully Transparent */
+    element-active-bg:           #DD719DE3; /* Primary color at 87% opacity for selected item */
+    
+    /* Text Colors */
+    text-color:                  @fg;
+    text-selected:               @bg; /* Text becomes black on the bright selection color */
+    prompt-color:                @primary;
+}
+
+/* ---- Window (The Glass Pane) ---- */
 window {
-    transparency:                "real";
+    transparency:                "real"; /* IMPORTANT: Rofi transparency setting for Hyprland blur */
     location:                    center;
     anchor:                      center;
     fullscreen:                  false;
     width:                       520px;
     height:                      520px;
+    
+    /* Glass Border */
     border:                      2px;
-    border-color:                @secondary-container;
+    border-color:                @primary;
     border-radius:               14px;
-    background-color:            @background;
+    
+    /* Glass Background */
+    background-color:            @window-bg; 
     background-image:            @current-image;
 }
 
@@ -35,7 +60,7 @@ window {
 mainbox {
     spacing:                     0px;
     orientation:                 vertical;
-    background-color:            transparent;
+    background-color:            transparent; /* Inherit window blur */
     children:                    [ "inputbar", "listview", "mode-switcher" ];
 }
 
@@ -44,10 +69,10 @@ inputbar {
     spacing:                     8px;
     padding:                     10px;
     border-radius:               8px;
-    border:                      2px;
-    border-color:                @secondary-container;
-    background-color:            @on-primary;
-    text-color:                  @on-surface;
+    border:                      1px;
+    border-color:                @primary;
+    background-color:            @input-bg;
+    text-color:                  @text-color;
     children:                    [ "textbox-prompt-colon", "entry" ];
 }
 
@@ -56,7 +81,7 @@ textbox-prompt-colon {
     expand:                      false;
     str:                         "  ";
     background-color:            inherit;
-    text-color:                  inherit;
+    text-color:                  @prompt-color;
 }
 
 entry {
@@ -64,7 +89,7 @@ entry {
     text-color:                  inherit;
     cursor:                      text;
     placeholder:                 "Search";
-    placeholder-color:           inherit;
+    placeholder-color:           #aaaaaa;
 }
 
 /* ---- Listview (detached below search) ---- */
@@ -77,9 +102,9 @@ listview {
     layout:                      vertical;
     fixed-height:                true;
     spacing:                     4px;
-    padding:                     20px 0 0 0;   /* transparent gap for floating effect */
-    background-color:            transparent;
-    text-color:                  @on-surface;
+    padding:                     20px 0 0 0;
+    background-color:            @list-bg; /* Fully transparent */
+    text-color:                  @text-color;
     cursor:                      "default";
 }
 
@@ -88,14 +113,17 @@ element {
     spacing:                     8px;
     padding:                     8px 10px;
     border-radius:               8px;
-    background-color:            transparent;
-    text-color:                  @on-surface;
+    
+    /* THIS ENSURES TRANSPARENCY for non-selected items */
+    background-color:            #00000000; 
+    
+    text-color:                  @text-color;
     cursor:                      pointer;
 }
 
 element selected.normal {
-    background-color:            @primary;
-    text-color:                  @on-secondary;
+    background-color:            @element-active-bg; 
+    text-color:                  @text-selected;
 }
 
 element-icon {
@@ -115,25 +143,25 @@ element-text {
 mode-switcher {
     spacing:                     0px;
     background-color:            transparent;
-    text-color:                  @primary-fixed;
+    text-color:                  @prompt-color;
     horizontal-align:            0.5;
 }
 
 button {
     padding:                     6px 10px;
     border-radius:               6px;
-    background-color:            @on-primary;
-    text-color:                  inherit;
+    background-color:            @input-bg; 
+    text-color:                  @text-color;
     cursor:                      pointer;
 }
 
 button selected {
-    background-color:            @primary;
-    text-color:                  @on-secondary;
+    background-color:            @element-active-bg;
+    text-color:                  @text-selected;
 }
 
 /* ---- Messages ---- */
 message, textbox, error-message {
     background-color:            transparent;
-    text-color:                  @on-surface;
-}
+    text-color:                  @text-color;
+} 

@@ -115,7 +115,7 @@ If workspaces is the leftmost module, omit left margin
 .modules-center{
     margin-right: 10px;
     margin-top: 4px;
-    background-color:transparent;
+    background-color:black;
 }
 
 #clock {

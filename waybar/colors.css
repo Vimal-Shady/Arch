@@ -4,7 +4,7 @@
 */
 
 :root {
-    --background: #101417;
+    --background: #1a1111;
 }
 
 :root {
@@ -16,19 +16,19 @@
 }
 
 :root {
-    --inverse_on_surface: #2d3135;
+    --inverse_on_surface: #382e2e;
 }
 
 :root {
-    --inverse_primary: #27638a;
+    --inverse_primary: #904a4a;
 }
 
 :root {
-    --inverse_surface: #e0e3e8;
+    --inverse_surface: #f0dedd;
 }
 
 :root {
-    --on_background: #e0e3e8;
+    --on_background: #f0dedd;
 }
 
 :root {
@@ -40,83 +40,83 @@
 }
 
 :root {
-    --on_primary: #00344f;
+    --on_primary: #561d1f;
 }
 
 :root {
-    --on_primary_container: #cae6ff;
+    --on_primary_container: #ffdad9;
 }
 
 :root {
-    --on_primary_fixed: #001e30;
+    --on_primary_fixed: #3b080c;
 }
 
 :root {
-    --on_primary_fixed_variant: #004b70;
+    --on_primary_fixed_variant: #733334;
 }
 
 :root {
-    --on_secondary: #22323f;
+    --on_secondary: #442929;
 }
 
 :root {
-    --on_secondary_container: #d3e5f5;
+    --on_secondary_container: #ffdad9;
 }
 
 :root {
-    --on_secondary_fixed: #0c1d29;
+    --on_secondary_fixed: #2c1515;
 }
 
 :root {
-    --on_secondary_fixed_variant: #384956;
+    --on_secondary_fixed_variant: #5d3f3f;
 }
 
 :root {
-    --on_surface: #e0e3e8;
+    --on_surface: #f0dedd;
 }
 
 :root {
-    --on_surface_variant: #c1c7ce;
+    --on_surface_variant: #d7c1c0;
 }
 
 :root {
-    --on_tertiary: #362b4b;
+    --on_tertiary: #412d05;
 }
 
 :root {
-    --on_tertiary_container: #ebddff;
+    --on_tertiary_container: #ffdead;
 }
 
 :root {
-    --on_tertiary_fixed: #201634;
+    --on_tertiary_fixed: #281900;
 }
 
 :root {
-    --on_tertiary_fixed_variant: #4d4162;
+    --on_tertiary_fixed_variant: #5a4319;
 }
 
 :root {
-    --outline: #8b9198;
+    --outline: #a08c8b;
 }
 
 :root {
-    --outline_variant: #41474d;
+    --outline_variant: #524343;
 }
 
 :root {
-    --primary: #96cdf8;
+    --primary: #ffb3b2;
 }
 
 :root {
-    --primary_container: #004b70;
+    --primary_container: #733334;
 }
 
 :root {
-    --primary_fixed: #cae6ff;
+    --primary_fixed: #ffdad9;
 }
 
 :root {
-    --primary_fixed_dim: #96cdf8;
+    --primary_fixed_dim: #ffb3b2;
 }
 
 :root {
@@ -124,19 +124,19 @@
 }
 
 :root {
-    --secondary: #b7c9d9;
+    --secondary: #e6bdbb;
 }
 
 :root {
-    --secondary_container: #384956;
+    --secondary_container: #5d3f3f;
 }
 
 :root {
-    --secondary_fixed: #d3e5f5;
+    --secondary_fixed: #ffdad9;
 }
 
 :root {
-    --secondary_fixed_dim: #b7c9d9;
+    --secondary_fixed_dim: #e6bdbb;
 }
 
 :root {
@@ -144,62 +144,62 @@
 }
 
 :root {
-    --source_color: #2a6185;
+    --source_color: #cc2b3c;
 }
 
 :root {
-    --surface: #101417;
+    --surface: #1a1111;
 }
 
 :root {
-    --surface_bright: #363a3e;
+    --surface_bright: #423736;
 }
 
 :root {
-    --surface_container: #1c2024;
+    --surface_container: #271d1d;
 }
 
 :root {
-    --surface_container_high: #262a2e;
+    --surface_container_high: #322827;
 }
 
 :root {
-    --surface_container_highest: #313539;
+    --surface_container_highest: #3d3232;
 }
 
 :root {
-    --surface_container_low: #181c20;
+    --surface_container_low: #221919;
 }
 
 :root {
-    --surface_container_lowest: #0b0f12;
+    --surface_container_lowest: #140c0c;
 }
 
 :root {
-    --surface_dim: #101417;
+    --surface_dim: #1a1111;
 }
 
 :root {
-    --surface_tint: #96cdf8;
+    --surface_tint: #ffb3b2;
 }
 
 :root {
-    --surface_variant: #41474d;
+    --surface_variant: #524343;
 }
 
 :root {
-    --tertiary: #cfc0e8;
+    --tertiary: #e4c18d;
 }
 
 :root {
-    --tertiary_container: #4d4162;
+    --tertiary_container: #5a4319;
 }
 
 :root {
-    --tertiary_fixed: #ebddff;
+    --tertiary_fixed: #ffdead;
 }
 
 :root {
-    --tertiary_fixed_dim: #cfc0e8;
+    --tertiary_fixed_dim: #e4c18d;
 }
 

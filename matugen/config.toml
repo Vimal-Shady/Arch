@@ -1,0 +1,17 @@
+[config.wallpaper]
+command = "swww"
+arguments = ["img","--transition-type","center","--transition-step","15","--transition-fps","60"]
+set = true
+
+[templates.hyprland]
+input_path = "/home/shady/.config/matugen/templates/hyprland-colors.conf.tmpl"
+output_path = "/home/shady/.config/hypr/colors.conf"
+post_hook = "hyprctl reload"
+
+[templates.waybar]
+input_path = "/home/shady/.config/matugen/templates/colors.css.tmpl"
+output_path = "/home/shady/.config/waybar/colors.css"
+
+[templates.rofi]
+input_path = "/home/shady/.config/matugen/templates/rofi.rasi.tmpl"
+output_path = "/home/shady/.config/rofi/colors.rasi"

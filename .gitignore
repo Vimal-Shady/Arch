@@ -7,11 +7,14 @@
 !rofi
 !walker
 !waybar
+!matugen
 
 !hypr/*
 !hyprlock/*
 !rofi/*
 !walker/*
 !waybar/*
+!matugen/*
+
 
 *.save
