@@ -1,0 +1,205 @@
+/*
+* Css Colors
+* Generated with Matugen
+*/
+
+:root {
+    --background: #101417;
+}
+
+:root {
+    --error: #ffb4ab;
+}
+
+:root {
+    --error_container: #93000a;
+}
+
+:root {
+    --inverse_on_surface: #2d3135;
+}
+
+:root {
+    --inverse_primary: #27638a;
+}
+
+:root {
+    --inverse_surface: #e0e3e8;
+}
+
+:root {
+    --on_background: #e0e3e8;
+}
+
+:root {
+    --on_error: #690005;
+}
+
+:root {
+    --on_error_container: #ffdad6;
+}
+
+:root {
+    --on_primary: #00344f;
+}
+
+:root {
+    --on_primary_container: #cae6ff;
+}
+
+:root {
+    --on_primary_fixed: #001e30;
+}
+
+:root {
+    --on_primary_fixed_variant: #004b70;
+}
+
+:root {
+    --on_secondary: #22323f;
+}
+
+:root {
+    --on_secondary_container: #d3e5f5;
+}
+
+:root {
+    --on_secondary_fixed: #0c1d29;
+}
+
+:root {
+    --on_secondary_fixed_variant: #384956;
+}
+
+:root {
+    --on_surface: #e0e3e8;
+}
+
+:root {
+    --on_surface_variant: #c1c7ce;
+}
+
+:root {
+    --on_tertiary: #362b4b;
+}
+
+:root {
+    --on_tertiary_container: #ebddff;
+}
+
+:root {
+    --on_tertiary_fixed: #201634;
+}
+
+:root {
+    --on_tertiary_fixed_variant: #4d4162;
+}
+
+:root {
+    --outline: #8b9198;
+}
+
+:root {
+    --outline_variant: #41474d;
+}
+
+:root {
+    --primary: #96cdf8;
+}
+
+:root {
+    --primary_container: #004b70;
+}
+
+:root {
+    --primary_fixed: #cae6ff;
+}
+
+:root {
+    --primary_fixed_dim: #96cdf8;
+}
+
+:root {
+    --scrim: #000000;
+}
+
+:root {
+    --secondary: #b7c9d9;
+}
+
+:root {
+    --secondary_container: #384956;
+}
+
+:root {
+    --secondary_fixed: #d3e5f5;
+}
+
+:root {
+    --secondary_fixed_dim: #b7c9d9;
+}
+
+:root {
+    --shadow: #000000;
+}
+
+:root {
+    --source_color: #2a6185;
+}
+
+:root {
+    --surface: #101417;
+}
+
+:root {
+    --surface_bright: #363a3e;
+}
+
+:root {
+    --surface_container: #1c2024;
+}
+
+:root {
+    --surface_container_high: #262a2e;
+}
+
+:root {
+    --surface_container_highest: #313539;
+}
+
+:root {
+    --surface_container_low: #181c20;
+}
+
+:root {
+    --surface_container_lowest: #0b0f12;
+}
+
+:root {
+    --surface_dim: #101417;
+}
+
+:root {
+    --surface_tint: #96cdf8;
+}
+
+:root {
+    --surface_variant: #41474d;
+}
+
+:root {
+    --tertiary: #cfc0e8;
+}
+
+:root {
+    --tertiary_container: #4d4162;
+}
+
+:root {
+    --tertiary_fixed: #ebddff;
+}
+
+:root {
+    --tertiary_fixed_dim: #cfc0e8;
+}
+
