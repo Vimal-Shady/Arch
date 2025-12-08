@@ -1,3 +1,7 @@
+@import "colors.rasi"
+
+
+
 /* ---- Configuration ---- */
 configuration {
     modi:                        "drun,filebrowser,window,run";
@@ -26,14 +30,14 @@ configuration {
     
     /* Transparent Backgrounds */
     /* AA (Alpha channel) - FF is opaque, 00 is transparent */
-    window-bg:                   #AA1F1F1F; /* 66% Opacity Dark Gray (The 'glass' base) */
-    input-bg:                    #CC2F2F2F; /* 80% Opacity Dark Gray (Slightly more solid input) */
+    window-bg:                   transparent; /* 66% Opacity Dark Gray (The 'glass' base) */
+    input-bg:                    @on-primary-fixed-variant; /* 80% Opacity Dark Gray (Slightly more solid input) */
     list-bg:                     #00000000; /* Fully Transparent */
-    element-active-bg:           #DD719DE3; /* Primary color at 87% opacity for selected item */
+    element-active-bg:           @primary-fixed-dim; /* Primary color at 87% opacity for selected item */
     
     /* Text Colors */
     text-color:                  @fg;
-    text-selected:               @bg; /* Text becomes black on the bright selection color */
+    text-selected:               @inverse-surface; /* Text becomes black on the bright selection color */
     prompt-color:                @primary;
 }
 
@@ -48,7 +52,7 @@ window {
     
     /* Glass Border */
     border:                      2px;
-    border-color:                @primary;
+    border-color:                transparent;
     border-radius:               14px;
     
     /* Glass Background */
@@ -69,8 +73,9 @@ inputbar {
     spacing:                     8px;
     padding:                     10px;
     border-radius:               8px;
-    border:                      1px;
+    border:                      0px;
     border-color:                @primary;
+    /*text-decoration:             underline;*/
     background-color:            @input-bg;
     text-color:                  @text-color;
     children:                    [ "textbox-prompt-colon", "entry" ];
@@ -123,7 +128,8 @@ element {
 
 element selected.normal {
     background-color:            @element-active-bg; 
-    text-color:                  @text-selected;
+    /*text-color:                  @text-selected;*/
+    text-color:                     @surface;
 }
 
 element-icon {
@@ -156,7 +162,7 @@ button {
 }
 
 button selected {
-    background-color:            @element-active-bg;
+    background-color:            @surface;
     text-color:                  @text-selected;
 }
 

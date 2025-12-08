@@ -4,10 +4,10 @@
     // "layer": "top",
     // "position": "bottom",
     "layer": "top",
-    "margin-top": 8,
+    "margin-top": 5,
     "margin-bottom": 0,
-    "margin-left": 8,
-    "margin-right": 8,
+    "margin-left": 6,
+    "margin-right": 6,
     "spacing": 0,
     // Choose the order of the modules
     // modules commented: (avoid sway cause it is not installed)
@@ -147,9 +147,9 @@
     },
 
     "network#wifi": {
-        "interface": "wlan0",
+        "interface": "wlp0s20f3",
         "format":"",
-        "format-wifi": "",
+        "format-wifi": " ",
         "format-disconnected": "",
         "tooltip-format-wifi": "   {essid} ({signalStrength}%)",
         "tooltip-format-disconnected": "",
