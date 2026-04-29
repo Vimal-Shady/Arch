@@ -91,7 +91,7 @@
         "format-alt": "{time} {icon}",
         "format-icons": ["\uf244", "\uf243","\uf242","\uf241","\uf240"]
     },
-    "power-profiles-daemon": {
+   /* "power-profiles-daemon": {
       "format": "{icon}",
       "tooltip-format": "{profile}",
       "tooltip": true,
@@ -102,6 +102,18 @@
         "balanced": "<i>&#xf013;</i>",
         "power-saver": "<i>&#xf06c;</i>"
       }
+    },*/
+
+    "power-profiles-daemon": {
+    "format": "{icon}",
+    "tooltip-format": "{profile}",
+    "tooltip": true,
+    "format-icons": {
+        "default": "<i>&#xf303;</i>",
+        "performance": "<i>&#xf303;</i>",
+        "balanced": "<i>&#xf303;</i>",
+        "power-saver": "<i>&#xf303;</i>"
+    }
     },
 
     "pulseaudio": {

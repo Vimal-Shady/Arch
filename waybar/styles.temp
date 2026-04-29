@@ -1,0 +1,348 @@
+/* Matugen colors */
+@import url("colors.css");
+
+* {
+    font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+window#waybar {
+    background-color: transparent;
+    color: @on_background;
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+button {
+    box-shadow: inset 0 -3px transparent;
+    border: none;
+    border-radius: 0;
+}
+
+button:hover {
+    background: inherit;
+    box-shadow: inset 0 -3px @primary; 
+}
+
+.modules-left,
+.modules-right {
+    margin-top: 4px;
+    background-color:transparent;
+}
+.modules-left, .margin-center {
+    margin-left: 10px;
+}
+.modules-right, .margin-center {
+    margin-right: 10px;
+}
+.modules-center {
+    margin-right: 10px;
+    background-color: @surface_container;
+    border-radius: 10px;
+    padding: 0 4px;
+}
+
+#workspaces {
+    background-color: @surface_container;
+    border-radius: 10px;
+    margin: 4px;
+    padding: 0 4px;
+}
+
+#workspaces button {
+    background-color: transparent;
+    transition: all 0.3s cubic-bezier(.17,.67,.83,.67); 
+    color: @on_background;
+    border-radius: 0; 
+    padding: 0px 6px 0px 6px;
+    margin: 0px 3px 0px 3px;
+}
+
+#workspaces button:hover {
+    background: @surface_container_high;
+}
+
+#workspaces button.active{
+    background-color: @primary; 
+    color: @on_primary;
+    padding: 0px 15px; 
+    box-shadow: none; 
+    border-radius: 10px; 
+}
+
+#workspaces button.focused {
+    background-color: @secondary_container; 
+    color: @on_secondary_container;
+    box-shadow: inset 0 -3px @secondary_fixed;
+    padding: 0px 6px 0px 6px;
+    border-radius: 0;
+}
+
+#workspaces button.urgent {
+    background-color: @error;
+    color: @on_error;
+    border-radius: 0;
+}
+
+#mode {
+    background-color: @secondary_container;
+    color: @on_secondary_container;
+    box-shadow: inset 0 -3px @secondary_fixed;
+}
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#wireplumber,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor,
+#scratchpad,
+#power-profiles-daemon,
+#mpd,
+#bluetooth{
+    padding: 0 10px;
+    color: @on_background;
+    margin: 4px;
+    background-color: @surface_container_high; 
+    border-radius: 8px;
+}
+
+
+.modules-left > widget:first-child > #workspaces {
+    margin-left: 0;
+}
+
+.modules-right > widget:last-child > #workspaces {
+    margin-right: 0;
+}
+
+#clock {
+    background-color: @inverse_primary;
+    color: @inverse_surface;
+}
+
+#network {
+    background-color: @surface_container_high;
+}
+
+
+#battery {
+    background-color: @surface_container_high; 
+    color: @on_background;
+}
+
+#battery.charging, #battery.plugged {
+    color: @on_primary;
+    background-color: #26A65B; 
+}
+
+@keyframes blink {
+    to {
+        color: transparent;
+    }
+}
+
+#battery.critical:not(.charging) {
+    background-color: @error;
+    animation-name: blink;
+    animation-duration: 0.7333s;
+    animation-timing-function: steps(12);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#power-profiles-daemon {
+    padding-right: 15px;
+}
+
+#power-profiles-daemon.performance {
+    background-color: @error;
+    color: @on_error;
+}
+
+#power-profiles-daemon.balanced {
+    background-color: @secondary_container;
+    color: @on_secondary_container;
+}
+
+#power-profiles-daemon.power-saver {
+    background-color: #2ecc71; 
+    color: #000000;
+}
+
+label:focus {
+    background-color: @surface;
+}
+
+#cpu {
+    background-color: @primary_fixed;
+    color: @on_primary_fixed;
+}
+
+#memory {
+    background-color: @tertiary_container;
+    color: @on_tertiary_container;
+}
+
+#disk {
+    background-color: @secondary;
+    color: @on_secondary;
+}
+
+#backlight {
+    background-color: @surface_variant;
+    color: @on_surface_variant;
+}
+
+#pulseaudio {
+    background-color: @surface_container_high;
+    color: @on_background;
+}
+
+#pulseaudio:hover {
+    background-color: @primary_fixed_dim;
+    color: @on_primary;
+    transition-duration: 0.2s;
+}
+
+#pulseaudio.muted {
+    background-color: @surface_variant;
+    color: @on_surface_variant;
+}
+
+#wireplumber {
+    background-color: @secondary_fixed;
+    color: @on_secondary_fixed;
+}
+
+#wireplumber.muted {
+    background-color: @error;
+}
+
+#custom-media {
+    background-color: @tertiary_fixed_dim;
+    color: @on_tertiary;
+    min-width: 100px;
+}
+
+#custom-media.custom-spotify {
+    background-color: @tertiary_fixed_dim;
+}
+
+#custom-media.custom-vlc {
+    background-color: @primary_fixed;
+}
+
+#temperature {
+    background-color: #26A65B;
+}
+
+#temperature.critical {
+    background-color: @error;
+}
+
+#tray {
+    background-color: @primary_container;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: @error;
+}
+
+#idle_inhibitor {
+    background-color: @surface_container_high;
+}
+
+#idle_inhibitor.activated {
+    background-color: @primary_fixed;
+    color: @on_primary_fixed;
+}
+
+#mpd {
+    background-color: @secondary_fixed_dim;
+    color: @on_secondary;
+}
+
+#mpd.disconnected {
+    background-color: @error;
+}
+
+#mpd.stopped {
+    background-color: @surface_variant;
+}
+
+#mpd.paused {
+    background-color: @primary_fixed_dim;
+}
+
+#language {
+    background: @inverse_primary;
+    color: @inverse_surface;
+    padding: 0 5px;
+    margin: 0 5px;
+    min-width: 16px;
+}
+
+#keyboard-state {
+    background: @surface_container_high;
+    color: @on_surface;
+    padding: 0 0px;
+    margin: 0 5px;
+    min-width: 16px;
+}
+
+#keyboard-state > label {
+    padding: 0 5px;
+}
+
+#keyboard-state > label.locked {
+    background: @surface_container_high;
+}
+
+#scratchpad {
+    background: @surface_container_high;
+}
+
+#scratchpad.empty {
+    background-color: transparent;
+}
+
+#privacy {
+    padding: 0;
+}
+
+#privacy-item {
+    padding: 0 5px;
+    color: @on_background;
+}
+
+#privacy-item.screenshare {
+    background-color: @error_container;
+}
+
+#privacy-item.audio-in {
+    background-color: #1ca000;
+}
+
+#privacy-item.audio-out {
+    background-color: @inverse_primary;
+}
