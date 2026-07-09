@@ -15,6 +15,6 @@
 !walker/*
 !waybar/*
 !matugen/*
-
+!../fish
 
 *.save
