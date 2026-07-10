@@ -7,8 +7,8 @@ arguments = [ "img", "-t", "fade", "--transition-duration", "0.5", "--transition
 set = true
 
 [templates.hyprland]
-input_path = "~/.config/Ax-Shell/config/matugen/templates/hyprland-colors.conf"
-output_path = "~/.config/Ax-Shell/config/hypr/colors.conf"
+input_path = "~/.config/Shady-XShell/config/matugen/templates/hyprland-colors.conf"
+output_path = "~/.config/Shady-XShell/config/hypr/colors.conf"
 post_hook = "hyprctl reload"
 
 [templates.waybar]
@@ -19,10 +19,10 @@ output_path = "/home/shady/.config/waybar/colors.css"
 input_path = "/home/shady/.config/matugen/templates/rofi.rasi.tmpl"
 output_path = "/home/shady/.config/rofi/colors.rasi"
 
-[templates.ax-shell]
-input_path = "~/.config/Ax-Shell/config/matugen/templates/ax-shell.css"
-output_path = "~/.config/Ax-Shell/styles/colors.css"
-post_hook = "fabric-cli exec ax-shell 'app.set_css()' &"
+[templates.shady-xshell]
+input_path = "~/.config/Shady-XShell/config/matugen/templates/shady-xshell.css"
+output_path = "~/.config/Shady-XShell/styles/colors.css"
+post_hook = "fabric-cli exec shady-xshell 'app.set_css()' &"
 
 [config.custom_colors.red]
 color = "#FF0000"
