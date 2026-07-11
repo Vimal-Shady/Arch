@@ -255,10 +255,10 @@ exec-once =  wl-paste --type text --watch cliphist store
 exec-once =  wl-paste --type image --watch cliphist store
 
 $fabricSend = fabric-cli exec {APP_NAME}
-$axMessage = notify-send "Axenide" "FIRE IN THE HOLE‼️🗣️🔥🕳️" -i "{home}/.config/{APP_NAME_CAP}/assets/ax.png" -A "🗣️" -A "🔥" -A "🕳️" -a "Source Code"
+$shadyMessage = notify-send "Shady-XShell" "Yokoso" -i "{home}/.config/{APP_NAME_CAP}/assets/shady.jpeg" -a "Source Code"
 
 bind = {get_bind_var("prefix_restart")}, {get_bind_var("suffix_restart")}, exec, killall {APP_NAME}; uwsm-app $(python {home}/.config/{APP_NAME_CAP}/main.py) # Reload {APP_NAME_CAP}
-bind = {get_bind_var("prefix_axmsg")}, {get_bind_var("suffix_axmsg")}, exec, $axMessage # Message
+bind = {get_bind_var("prefix_shadymsg")}, {get_bind_var("suffix_shadymsg")}, exec, $shadyMessage # Message
 bind = {get_bind_var("prefix_dash")}, {get_bind_var("suffix_dash")}, exec, $fabricSend 'notch.open_notch("dashboard")' # Dashboard
 bind = {get_bind_var("prefix_bluetooth")}, {get_bind_var("suffix_bluetooth")}, exec, $fabricSend 'notch.open_notch("bluetooth")' # Bluetooth
 bind = {get_bind_var("prefix_pins")}, {get_bind_var("suffix_pins")}, exec, $fabricSend 'notch.open_notch("pins")' # Pins

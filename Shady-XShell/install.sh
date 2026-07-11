@@ -4,7 +4,7 @@ set -e          # Exit immediately if a command fails
 set -u          # Treat unset variables as errors
 set -o pipefail # Prevent errors in a pipeline from being masked
 
-REPO_URL=""
+REPO_URL="https://github.com/Vimal-Shady/Arch.git"
 INSTALL_DIR="$HOME/.config/Shady-XShell"
 PACKAGES=(
   awww-git
@@ -78,10 +78,22 @@ fi
 # Clone or update the repository
 if [ -d "$INSTALL_DIR" ]; then
   echo "Updating Shady-XShell..."
-  git -C "$INSTALL_DIR" pull
+  if git -C "$INSTALL_DIR" rev-parse --is-inside-work-tree &>/dev/null; then
+    git -C "$INSTALL_DIR" pull
+  else
+    echo "Downloading latest files..."
+    tmpdir=$(mktemp -d)
+    git clone --depth=1 --branch Shady/Anime "$REPO_URL" "$tmpdir/Arch"
+    cp -r "$tmpdir/Arch/Shady-XShell/"* "$INSTALL_DIR/"
+    rm -rf "$tmpdir"
+  fi
 else
-  echo "Cloning Shady-XShell..."
-  git clone --depth=1 "$REPO_URL" "$INSTALL_DIR"
+  echo "Cloning/Installing Shady-XShell..."
+  mkdir -p "$INSTALL_DIR"
+  tmpdir=$(mktemp -d)
+  git clone --depth=1 --branch Shady/Anime "$REPO_URL" "$tmpdir/Arch"
+  cp -r "$tmpdir/Arch/Shady-XShell/"* "$INSTALL_DIR/"
+  rm -rf "$tmpdir"
 fi
 
 # Install required packages using the detected AUR helper (only if missing)

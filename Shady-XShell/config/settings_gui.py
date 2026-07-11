@@ -36,8 +36,8 @@ from .settings_utils import (
 class HyprConfGUI(Window):
     def __init__(self, show_lock_checkbox: bool, show_idle_checkbox: bool, **kwargs):
         super().__init__(
-            title="Ax-Shell Settings",
-            name="axshell-settings-window",
+            title="Shady-XShell Settings",
+            name="shadyxshell-settings-window",
             size=(640, 640),
             **kwargs,
         )
@@ -132,7 +132,7 @@ class HyprConfGUI(Window):
         self.entries = []
         bindings = [
             (f"Reload {APP_NAME_CAP}", "prefix_restart", "suffix_restart"),
-            ("Message", "prefix_axmsg", "suffix_axmsg"),
+            ("Message", "prefix_shadymsg", "suffix_shadymsg"),
             ("Dashboard", "prefix_dash", "suffix_dash"),
             ("Bluetooth", "prefix_bluetooth", "suffix_bluetooth"),
             ("Pins", "prefix_pins", "suffix_pins"),
@@ -677,7 +677,7 @@ class HyprConfGUI(Window):
         )
         self.auto_append_switch = Gtk.Switch(
             active=get_bind_var("auto_append_hyprland"),
-            tooltip_text="Automatically append Ax-Shell source string to hyprland.conf",
+            tooltip_text="Automatically append Shady-XShell source string to hyprland.conf",
         )
         auto_append_switch_container.add(self.auto_append_switch)
         system_grid.attach(auto_append_switch_container, 1, 0, 1, 1)
@@ -687,7 +687,7 @@ class HyprConfGUI(Window):
         system_grid.attach(monitor_header, 0, 1, 2, 1)
 
         monitor_label = Label(
-            label="Show Ax-Shell on monitors:", h_align="start", v_align="center"
+            label="Show Shady-XShell on monitors:", h_align="start", v_align="center"
         )
         system_grid.attach(monitor_label, 0, 2, 1, 1)
 
@@ -767,7 +767,7 @@ class HyprConfGUI(Window):
                 valign=Gtk.Align.CENTER,
             )
             self.lock_switch = Gtk.Switch(
-                tooltip_text="Replace Hyprlock configuration with Ax-Shell's custom config"
+                tooltip_text="Replace Hyprlock configuration with Shady-XShell's custom config"
             )
             lock_switch_container.add(self.lock_switch)
             system_grid.attach(lock_switch_container, 3, row, 1, 1)
@@ -784,7 +784,7 @@ class HyprConfGUI(Window):
                 valign=Gtk.Align.CENTER,
             )
             self.idle_switch = Gtk.Switch(
-                tooltip_text="Replace Hypridle configuration with Ax-Shell's custom config"
+                tooltip_text="Replace Hypridle configuration with Shady-XShell's custom config"
             )
             idle_switch_container.add(self.idle_switch)
             system_grid.attach(idle_switch_container, 3, row, 1, 1)
@@ -964,7 +964,7 @@ class HyprConfGUI(Window):
         repo_box = Box(orientation="h", spacing=6, h_align="start")
         repo_label = Label(label="GitHub:", h_align="start")
         repo_link = Label(
-            markup='<a href="https://github.com/Axenide/Ax-Shell">https://github.com/Axenide/Ax-Shell</a>'
+            markup='<a href="https://github.com/Vimal-Shady/Arch">https://github.com/Vimal-Shady/Arch</a>'
         )
         repo_box.add(repo_label)
         repo_box.add(repo_link)
@@ -973,12 +973,12 @@ class HyprConfGUI(Window):
         def on_kofi_clicked(_):
             import webbrowser
 
-            webbrowser.open("https://ko-fi.com/Axenide")
+            webbrowser.open("https://ko-fi.com/Vimal-Shady")
 
         kofi_btn = Button(
             label="Support on Ko-Fi ❤️",
             on_clicked=on_kofi_clicked,
-            tooltip_text="Support Axenide on Ko-Fi",
+            tooltip_text="Support Vimal-Shady on Ko-Fi",
             style="margin-top: 18px; min-width: 160px;",
         )
         vbox.add(kofi_btn)
@@ -1257,7 +1257,7 @@ class HyprConfGUI(Window):
             start_config()
             print(f"{time.time():.4f}: Finished start_config().")
 
-            print(f"{time.time():.4f}: Initiating Ax-Shell restart using Popen...")
+            print(f"{time.time():.4f}: Initiating {APP_NAME_CAP} restart using Popen...")
             main_py = os.path.expanduser(f"~/.config/{APP_NAME_CAP}/main.py")
             kill_cmd = f"killall {APP_NAME}"
             start_cmd = ["uwsm", "app", "--", "python", main_py]
@@ -1288,7 +1288,7 @@ class HyprConfGUI(Window):
             except Exception as e:
                 print(f"Error restarting {APP_NAME_CAP} via Popen: {e}")
 
-            print(f"{time.time():.4f}: Ax-Shell restart commands issued via Popen.")
+            print(f"{time.time():.4f}: {APP_NAME_CAP} restart commands issued via Popen.")
             end_time = time.time()
             print(
                 f"{end_time:.4f}: Background task finished (Total: {end_time - start_time:.4f}s)."

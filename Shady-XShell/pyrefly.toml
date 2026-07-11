@@ -1,0 +1,10 @@
+search-path = [
+    "."
+]
+
+project-includes = [
+    "**/*.py*",
+    "**/*.ipynb"
+]
+
+python-interpreter-path = "/usr/bin/python"
