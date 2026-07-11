@@ -18,7 +18,21 @@ __pycache__/
 !walker/*
 !waybar/*
 !matugen/*
-!../fish
+
+
+# Fish
+!fish/
+!fish/config.fish
+
+# Oh My Posh
+!ohmyposh/
+!ohmyposh/themes/
+!ohmyposh/themes/Shady.omp.json
+!ohmyposh/themes/shady-minimal.omp.json
+
+# Kitty
+!kitty/
+!kitty/**
 
 # Shady-XShell
 !/Shady-XShell/
