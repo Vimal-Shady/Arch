@@ -1,6 +1,6 @@
 # Ignore EVERYTHING
 *
-
+*.bak
 # Ignore Python cache everywhere
 __pycache__/
 
@@ -70,4 +70,5 @@ __pycache__/
 !Shady-XShell/widgets/
 !Shady-XShell/widgets/*
 
-*.save
+**/*.bak
+**/*.save
