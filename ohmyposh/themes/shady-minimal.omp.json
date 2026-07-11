@@ -1,0 +1,73 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "version": 3,
+  "final_space": true,
+  "blocks": [
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "segments": [
+        {
+          "type": "text",
+          "style": "plain",
+          "foreground": "#38bcdb",
+          "template": "╭ "
+        },
+        {
+          "type": "os",
+          "style": "plain",
+          "foreground": "#38bcdb",
+          "template": "{{ if eq .Icon \"linux\" }}\uF31B{{ else }}{{ .Icon }}{{ end }} "
+        },
+        {
+          "type": "text",
+          "style": "plain",
+          "foreground": "#38bcdb",
+          "template": "Hachiman ",
+          "properties": {
+            "bold": true
+          }
+        },
+        {
+          "type": "path",
+          "style": "plain",
+          "foreground": "#38bcdb",
+          "template": "\uF07C {{ .Path }} ",
+          "properties": {
+            "style": "full",
+            "bold": true
+          }
+        },
+        {
+          "type": "git",
+          "style": "plain",
+          "foreground": "#5af78e",
+          "template": "{{ if .HEAD }}({{ .HEAD }}){{ end }}",
+          "properties": {
+            "fetch_status": false,
+            "bold": true
+          }
+        }
+      ]
+    },
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "type": "text",
+          "style": "plain",
+          "foreground": "#38bcdb",
+          "template": "╰─"
+        },
+        {
+        "type": "text",
+        "style": "plain",
+        "foreground": "#FFFFFF",
+        "template": "❯"
+      }
+      ]
+    }
+  ]
+}

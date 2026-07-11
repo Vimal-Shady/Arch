@@ -1,6 +1,9 @@
 # Ignore EVERYTHING
 *
 
+# Ignore Python cache everywhere
+__pycache__/
+
 !.gitignore
 !hypr/
 !hyprlock/
@@ -16,5 +19,55 @@
 !waybar/*
 !matugen/*
 
+
+# Fish
+!fish/
+!fish/config.fish
+
+# Oh My Posh
+!ohmyposh/
+!ohmyposh/themes/
+!ohmyposh/themes/Shady.omp.json
+!ohmyposh/themes/shady-minimal.omp.json
+
+# Kitty
+!kitty/
+!kitty/**
+
+# Shady-XShell
+!/Shady-XShell/
+!Shady-XShell/*
+!Shady-XShell/assets/
+!Shady-XShell/assets/*
+!Shady-XShell/assets/fonts/
+!Shady-XShell/assets/fonts/**
+!Shady-XShell/assets/screenshots/
+!Shady-XShell/assets/screenshots/*
+!Shady-XShell/assets/wallpapers_example/
+!Shady-XShell/assets/wallpapers_example/*
+!Shady-XShell/config/
+!Shady-XShell/config/*
+!Shady-XShell/config/cavalcade/
+!Shady-XShell/config/cavalcade/*
+!Shady-XShell/config/hypr/
+!Shady-XShell/config/hypr/*
+!Shady-XShell/config/matugen/
+!Shady-XShell/config/matugen/*
+!Shady-XShell/config/matugen/templates/
+!Shady-XShell/config/matugen/templates/*
+!Shady-XShell/modules/
+!Shady-XShell/modules/*
+!Shady-XShell/modules/upower/
+!Shady-XShell/modules/upower/*
+!Shady-XShell/scripts/
+!Shady-XShell/scripts/*
+!Shady-XShell/services/
+!Shady-XShell/services/*
+!Shady-XShell/styles/
+!Shady-XShell/styles/*
+!Shady-XShell/utils/
+!Shady-XShell/utils/*
+!Shady-XShell/widgets/
+!Shady-XShell/widgets/*
 
 *.save
