@@ -1,8 +1,8 @@
 {
     "prefix_restart": "SUPER ALT",
     "suffix_restart": "B",
-    "prefix_axmsg": "SUPER",
-    "suffix_axmsg": "A",
+    "prefix_shadymsg": "SUPER",
+    "suffix_shadymsg": "A",
     "prefix_dash": "SUPER",
     "suffix_dash": "D",
     "prefix_bluetooth": "SUPER",

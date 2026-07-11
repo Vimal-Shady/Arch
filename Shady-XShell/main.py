@@ -67,7 +67,7 @@ if __name__ == "__main__":
     # If selected_monitors is empty, show on all monitors (current behavior)
     if not selected_monitors_config:
         monitors = all_monitors
-        print("Ax-Shell: No specific monitors selected, showing on all monitors")
+        print("Shady-XShell: No specific monitors selected, showing on all monitors")
     else:
         # Filter monitors to only include selected ones
         monitors = []
@@ -77,13 +77,13 @@ if __name__ == "__main__":
             monitor_name = monitor.get('name', f'monitor-{monitor.get("id", 0)}')
             if monitor_name in selected_monitor_names:
                 monitors.append(monitor)
-                print(f"Ax-Shell: Including monitor '{monitor_name}' (selected)")
+                print(f"Shady-XShell: Including monitor '{monitor_name}' (selected)")
             else:
-                print(f"Ax-Shell: Excluding monitor '{monitor_name}' (not selected)")
+                print(f"Shady-XShell: Excluding monitor '{monitor_name}' (not selected)")
         
         # Fallback: if no valid monitors found, use all monitors
         if not monitors:
-            print("Ax-Shell: No valid selected monitors found, falling back to all monitors")
+            print("Shady-XShell: No valid selected monitors found, falling back to all monitors")
             monitors = all_monitors
     
     # Create application components list
